@@ -1,0 +1,18 @@
+  in package.json
+
+  Production version deployed to Heroku
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+
+  Dev version for launching in browser
+  Dev environment
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
