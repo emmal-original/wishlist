@@ -12,6 +12,10 @@ export default class App extends Component {
     this.state = {
       userName: "Emma",
       wishes: [
+        {
+          wish: "",
+          granted: false,
+        }
       ],
       showGranted: true
     }
@@ -40,7 +44,7 @@ export default class App extends Component {
 
   toggleWish = (wishToggle) => this.setState(
     {
-      wishes: this.state.wishes.map(item => item.wish === wishToggle.action ? { ...item, granted: !item.granted } : item)
+      wishes: this.state.wishes.map(item => item.wish === wishToggle.wish ? {...item, granted: !item.granted } : item)
     },
     () => localStorage.setItem("savedWishes", JSON.stringify(this.state))
   );
